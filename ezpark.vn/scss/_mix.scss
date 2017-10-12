@@ -1,0 +1,109 @@
+@mixin btnAnmt1() {
+    width: 36px;
+    height: 36px;
+    top: 10px;
+    right: 18px;
+    position: absolute;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid white;
+    -webkit-animation: circle-anmt 1.2s infinite ease-in-out;
+    -moz-animation: circle-anmt 1.2s infinite ease-in-out;
+    -ms-animation: circle-anmt 1.2s infinite ease-in-out;
+    animation: circle-anmt 1.2s infinite ease-in-out;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+@mixin btnAnmt2(){
+    background-color: #75eb50;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    top: 18px;
+    right: 26px;
+    position: absolute;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    -webkit-animation: circle-anmt2 2.3s infinite ease-in-out;
+    -moz-animation: circle-anmt2 2.3s infinite ease-in-out;
+    -ms-animation: circle-anmt2 2.3s infinite ease-in-out;
+    animation: circle-anmt2 2.3s infinite ease-in-out;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+
+@mixin linear-gradient($top, $bottom, $percent){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom $percent); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom $percent); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom $percent); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom $percent); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom $percent); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin ltr-gradient($left, $right, $percentL, $percentR){
+  background: -webkit-linear-gradient(left, $left $percentL, $right $percentR);
+  background: -o-linear-gradient(right, $left $percentL, $right $percentR);
+  background: -moz-linear-gradient(right, $left $percentL, $right $percentR);
+  background: linear-gradient(to right, $left $percentL, $right $percentR);
+}
+
+@mixin rounded-btn($width, $height, $radius) {
+  @include border-radius($radius);
+  width: $width;
+  height: $height;
+  line-height: $height;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    -ms-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    -ms-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin display-flex($direction: column){
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin transform($scale) {
+  -webkit-transform:scale($scale);
+  -moz-transform:scale($scale);
+  -ms-transform:scale($scale);
+  transform: $scale;
+}

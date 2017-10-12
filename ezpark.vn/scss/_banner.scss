@@ -1,0 +1,68 @@
+#banner{
+  background-image: url(../img/banner_bg.png);
+  background-size: cover;
+  padding: 50px 0;
+  h1{
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+  img{
+    width: 300px;
+    margin: 15px auto;
+    display: block;
+  }
+  .banner_btn{
+    .ios-app{
+      background-image: url(../img/iphone.png);
+    }
+    .android-app{
+      background-image: url(../img/android.png);
+    }
+    a{
+      background-size: 135px 80px;
+      width: 135px;
+      height: 40px;
+      margin: 15px auto;
+      display: block;
+      background-position: bottom;
+      &:hover,&:focus{
+        background-position: top;
+      }
+    }
+    @media (min-width: 540px){
+      @include display-flex;
+      justify-content: center;
+      flex-direction: row;
+      a{
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+  @media (min-width: 768px){
+    background-position: center;
+    h1{
+      text-align: left;
+    }
+    img{
+      margin: 0 0 15px -15px;
+    }
+    .banner_btn{
+      justify-content: flex-start;
+    }
+  }
+  @media (min-width: 992px){
+    padding: 120px 0;
+    h1{
+      line-height: 1.6;
+      font-size: 37px;
+    }
+    .banner_btn .ios-app{
+      margin-left: 20px;
+    }
+  }
+}

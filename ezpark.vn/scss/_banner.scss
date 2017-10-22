@@ -14,6 +14,9 @@
     margin: 15px auto;
     display: block;
   }
+  .qr-code{
+    display: none;
+  }
   .banner_btn{
     .ios-app{
       background-image: url(../img/iphone.png);
@@ -63,6 +66,12 @@
     }
     .banner_btn .ios-app{
       margin-left: 20px;
+    }
+    .qr-code{
+      display: block;
+      width: 150px;
+      margin-top: 20px;
+      margin-left: 80px;
     }
   }
 }

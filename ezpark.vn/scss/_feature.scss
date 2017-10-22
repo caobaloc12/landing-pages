@@ -9,9 +9,6 @@
     text-align: center;
     margin: 20px 0 40px;
   }
-  .feature-list{
-
-  }
   .feature-item{
     @include display-flex;
     flex-direction: row;
@@ -59,9 +56,11 @@
       position: relative;
     }
     .phone-img{
+      @include border-radius(3px); 
       display: block;
       position: absolute;
-      top: 50px;      
+      right: 20px;
+      height: 830px;
     }
     .feature-item-content{
       h4{

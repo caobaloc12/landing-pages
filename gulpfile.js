@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require ('gulp-sass');
 var browserSync = require('browser-sync').create();
-var baseDir = "./ezpark.vn";
+var baseDir = "./noithatala.vn";
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -25,6 +25,6 @@ gulp.task('watch', ['browserSync'], function (){
   // Reloads the browser whenever HTML or JS files change
   gulp.watch(baseDir + '/scss/*.scss', browserSync.reload);
   gulp.watch(baseDir + '/css/*.css', browserSync.reload);
-  gulp.watch(baseDir + '/*.html', browserSync.reload);
+  gulp.watch(baseDir + '/**/*.html', browserSync.reload);
   gulp.watch(baseDir + '/js/*.js', browserSync.reload);
 });

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&subset=vietnamese');
+@import "../css/bootstrap.min.css";
+@import "../css/font-awesome.min.css";
+body {
+    font-family: "Roboto", sans-serif;
+    padding-top: 80px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-block {
+    padding: 1rem;
+}
+
+.card .card-img-top {
+    max-height: 160px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mh-50px {
+    min-height: 50px;
+}
+
+.footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 10px;
+    color: #aaa;
+    p {
+        font-size: 15px;
+        &.copyright {
+            color: #777;
+            font-size: 14px;
+        }
+    }
+}
+
+.support-box {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    display: block;
+    width: 300px;
+    h6 {        
+        padding: 10px 15px;
+        text-align: center;
+        cursor: pointer;
+        color: #dedede;
+    }
+    img{
+        height: 30px;
+        width: auto;
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+        &:hover,&:focus{
+            text-decoration: none;
+            &:hover,&:focus{
+                color: #ffffff;
+            }
+        }
+    }
+    i {
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+}
